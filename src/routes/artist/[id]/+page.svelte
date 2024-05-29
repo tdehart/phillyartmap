@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { Dices } from 'lucide-svelte';
-	import { goto } from '$app/navigation';
+	import { goToRandomArtist } from '$lib/randomArtist';
 	
   export let data;
 	let top: HTMLElement;
 
-	function goToRandomArtist() {
-		const id = Math.floor(Math.random() * 559) + 1;
-		goto(`/artist/${id}`);
+	function onclick() {
+		goToRandomArtist();
 		top.scrollIntoView();
 	}
 </script>
@@ -29,7 +28,7 @@
 		</figure>
 	{/each}
 
-	<button on:click={goToRandomArtist} type="button" class="btn variant-filled mt-8">
+	<button {onclick} type="button" class="btn variant-filled mt-8">
 		<Dices />
 		<span>Random Artist</span>
 	</button>
