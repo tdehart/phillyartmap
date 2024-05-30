@@ -22,8 +22,8 @@
 		<figure class="flex flex-col my-4">
 			<img class="rounded" src={piece.pictures[0].large.url} alt={piece.title} />
 			<figcaption>
-				<strong class="font-bold">{piece.title.display}.</strong>
-				Located on {piece.location.description} (<em>{piece.years[0].year})</em>
+				<strong class="font-bold">{piece.title.display} (<em>{piece.years[0].year})</em>.</strong>
+				Located on {piece.location.description} [{piece.location.latitude}, {piece.location.longitude}]
 			</figcaption>
 		</figure>
 	{/each}

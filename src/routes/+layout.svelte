@@ -10,6 +10,9 @@
 				<a href="/">
 					<strong class="text-xl uppercase">Philly Art Map</strong>
 				</a>
+				<a href="/map">
+					<strong class="ml-4">Map</strong>
+				</a>
 				
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
